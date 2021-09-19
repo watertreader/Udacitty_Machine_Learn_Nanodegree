@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <title>Sentiment Analysis Web App</title>
         <meta charset="utf-8">
-        <meta name="viewport"  content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Sentiment%20Analysis%20Web%20App_files/bootstrap.css">
+        <script src="Sentiment%20Analysis%20Web%20App_files/jquery.js"></script>
+        <script src="Sentiment%20Analysis%20Web%20App_files/bootstrap.js"></script>
 
         <script>
          "use strict";
@@ -36,16 +36,19 @@
         <div class="container">
             <h1>Is your review positive, or negative?</h1>
             <p>Enter your review below and click submit to find out...</p>
-            <form method="POST"
-                  action="https://50j7myj0tk.execute-api.us-west-2.amazonaws.com/prod"
-                  onsubmit="return submitForm(this);" >                     <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
+            <form method="POST" action="https://50j7myj0tk.execute-api.us-west-2.amazonaws.com/prod" onsubmit="return submitForm(this);">                     <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
                 <div class="form-group">
                     <label for="review">Review:</label>
-                    <textarea class="form-control"  rows="5" id="review">Please write your review here.</textarea>
+                    <textarea class="form-control" rows="5" id="review">The
+ editing crew have worked wonders to create a seamless piece of art! The
+ music is so good that you don’t hear it as a separate part. It is 
+written and performed so well that it just enhances the experience and 
+takes you in further to the film. Must go and see.</textarea>
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
-            <h1 class="bg-success" id="result"></h1>
+            <h1 class="bg-success" id="result">Your review was POSITIVE!</h1>
         </div>
-    </body>
-</html>
+    
+
+</body></html>
