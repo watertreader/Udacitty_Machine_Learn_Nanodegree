@@ -84,8 +84,7 @@ def train(model, train_loader, epochs, optimizer, loss_fn, device):
             optimizer.zero_grad()
             
             ## forward pass through the network
-            forward_pass = model.forward(batch_X)
-            #forward_pass = model(batch_X)
+            forward_pass = model(batch_X)
             
             # calculate the batch loss
             loss = loss_fn(forward_pass, batch_y)
