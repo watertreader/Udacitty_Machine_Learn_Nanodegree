@@ -90,7 +90,7 @@ def predict_fn(input_data, model):
     with torch.no_grad():                 #impacts the autograd engine and deactivate it
         output = model.forward(data)
     
-
-    result = np.round(output.numpy())
+    raw = output[0].item()   ### assuming only one tensor value
+    result = 1.0 if raw > 0.5 else 0.0
 
     return result
